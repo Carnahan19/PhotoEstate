@@ -1,0 +1,36 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <title>PhotoEstate</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/virtualstaging/">Montaje Virtual</a>
+        <a href="/enhancements/">Mejora de imagen</a>
+        <a href="/twilight/">Día a crepusculo</a>
+        <a href="/floorplans/">Redibujo de planos</a>
+        {% if user.is_authenticated %}
+            <a href="/signout">Logout</a>  
+        {% else %}
+            <a href="/signin">Login/Registro</a>
+        {% endif %}
+    </nav>
+    <br>
+    {% block content %}
+
+    {% endblock %}
+</body>
+<footer class="footer">
+    <p>&copy; 2024 PhotoEstate. Se reservan los derechos.</p>
+</footer>
+</html>
