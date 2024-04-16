@@ -16,13 +16,14 @@
     <nav>
         <a href="/">Inicio</a>
         <a href="/virtualstaging/">Montaje Virtual</a>
-        <a href="/enhancements/">Mejora de imagen</a>
-        <a href="/twilight/">Día a crepusculo</a>
+        <a href="/enhancements/">Mejora de imágen</a>
+        <a href="/twilight/">Conversión a crepúsculo</a>
         <a href="/floorplans/">Redibujo de planos</a>
         {% if user.is_authenticated %}
-            <a href="/signout">Logout</a>  
+            <a href="/orders/">Mis pedidos</a>
+            <a href="/signout">Cerrar sesión</a>  
         {% else %}
-            <a href="/signin">Login/Registro</a>
+            <a href="/signup">Login/Registro</a>
         {% endif %}
     </nav>
     <br>

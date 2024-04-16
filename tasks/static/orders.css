@@ -1,0 +1,62 @@
+.projects-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1em;
+    color: #4a2222;
+}
+
+.project-actions button {
+    padding: 10px 15px;
+    background-color: #2F4454;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-actions button:hover {
+    background-color: #1D2935;
+}
+
+.projects-list {
+    margin-top: 2em;
+}
+
+.project {
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project h2 {
+    color: #2F4454;
+}
+
+.project p {
+    margin-bottom: 1em;
+}
+
+.project button {
+    padding: 5px 10px;
+    background-color: #76a9fa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project button:hover {
+    background-color: #4a8af4;
+}

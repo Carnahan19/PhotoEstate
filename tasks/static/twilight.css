@@ -6,10 +6,30 @@
   box-sizing: border-box;
 }
 
+iframe {
+  aspect-ratio: 16/9;
+}
+
+.video-container {
+  margin: 2rem;
+  max-height: 300px;
+}
 
 img {
   display: block;
   max-width: 100%;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 2rem; /* Space between columns */
+  padding: 2rem; /* Padding around the grid */
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -38,7 +58,6 @@ img {
   position: absolute;
   inset: 0;
   width: var(--position);
-  filter: grayscale(100%)
 }
 
 .slider {

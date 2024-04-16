@@ -9,97 +9,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'virtualstaging.css' %}">
-    <script src="{% static 'slidingimage.js' %}"></script> 
+    <link rel="stylesheet" href="{% static 'floorplans.css' %}">
+    <script src="{% static 'scripts/slidingimage.js' %}"></script> 
 
 </head>
 <body>
+  <div class="titulo">
+    <h2>Redibujo de planos</h2>
+  </div>
     <main>
-        <div class="container">
-          <div class="image-container">
-            <img
-              class="image-before slider-image"
-             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="color photo"
-            />
-            <img
-              class="image-after slider-image"
-              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="black and white"
-            />
-          </div>
-          <!-- step="10" -->
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            aria-label="Percentage of before photo shown"
-            class="slider"
+      <div class="container">
+        <div class="image-container">
+          <img
+            class="image-before slider-image"
+           src="{% static 'resources/beforefp1.jpg' %}"
+            alt="color photo"
           />
-          <div class="slider-line" aria-hidden="true"></div>
-          <div class="slider-button" aria-hidden="true">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-            >
-              <rect width="256" height="256" fill="none"></rect>
-              <line
-                x1="128"
-                y1="40"
-                x2="128"
-                y2="216"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <line
-                x1="96"
-                y1="128"
-                x2="16"
-                y2="128"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <polyline
-                points="48 160 16 128 48 96"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></polyline>
-              <line
-                x1="160"
-                y1="128"
-                x2="240"
-                y2="128"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <polyline
-                points="208 96 240 128 208 160"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></polyline>
-            </svg>
-          </div>
+          <img
+            class="image-after slider-image"
+            src="{% static 'resources/afterfp1.jpg' %}"
+            alt="black and white"
+          />
         </div>
-      </main>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Percentage of before photo shown"
+          class="slider"
+        />
+        <div class="slider-line" aria-hidden="true"></div>
+        <div class="slider-button" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="128"
+              y1="40"
+              x2="128"
+              y2="216"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="96"
+              y1="128"
+              x2="16"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="48 160 16 128 48 96"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <line
+              x1="160"
+              y1="128"
+              x2="240"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="208 96 240 128 208 160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+          </svg>
+        </div>
+      </div>
+      <!-- aqui es la segunda iamgen -->
+      <div class="container">
+        <div class="image-container">
+          <img
+            class="image-before slider-image"
+           src="{% static 'resources/bfp2.jpg' %}"
+            alt="color photo"
+          />
+          <img
+            class="image-after slider-image"
+            src="{% static 'resources/afp2.jpg' %}"
+            alt="black and white"
+          />
+        </div>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Percentage of before photo shown"
+          class="slider"
+        />
+        <div class="slider-line" aria-hidden="true"></div>
+        <div class="slider-button" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="128"
+              y1="40"
+              x2="128"
+              y2="216"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="96"
+              y1="128"
+              x2="16"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="48 160 16 128 48 96"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <line
+              x1="160"
+              y1="128"
+              x2="240"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="208 96 240 128 208 160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+          </svg>
+        </div>
+      </div>
+      <!-- aqui es la tercera iamgen -->
+      <div class="container">
+        <div class="image-container">
+          <img
+            class="image-before slider-image"
+           src="{% static 'resources/bfp3.jpg' %}"
+            alt="color photo"
+          />
+          <img
+            class="image-after slider-image"
+            src="{% static 'resources/afp3.jpg' %}"
+            alt="black and white"
+          />
+        </div>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Percentage of before photo shown"
+          class="slider"
+        />
+        <div class="slider-line" aria-hidden="true"></div>
+        <div class="slider-button" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="128"
+              y1="40"
+              x2="128"
+              y2="216"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="96"
+              y1="128"
+              x2="16"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="48 160 16 128 48 96"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <line
+              x1="160"
+              y1="128"
+              x2="240"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="208 96 240 128 208 160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+          </svg>
+        </div>
+      </div>
+      <div class="feature">
+        <h3>Elige uno de nuestros distintos estilos</h3>
+        <p>Ofrecemos distintos estilos para sus montajes</p>
+    </div>
+    <div class="feature">
+        <h3>Entregas Express</h3>
+        <p>recibe todos tus proyectos dentro de 48 horas o menos</p>
+    </div>
+    <div class="feature">
+        <h3>Montajes Realistas</h3>
+        <p>No se preocupe por montajes que parezcan falsos</p>
+    </div>
+    </main>
     
 </body>
 </html>

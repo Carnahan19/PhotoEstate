@@ -5,6 +5,17 @@ from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
 
+# renderizar el html para la pagina de ordenes.
+def orders(request):
+    return render(request, 'orders.html')
+
+# renderizar el html para la pagina que permite colocar un pedido nuevo.
+def njobs(request):
+    return render(request, 'njobs.html')
+
+# renderizar el html para la pagina de error 404.
+def handler404(request, exception):
+    return render(request, '404.html', {})
 
 # renderizar el html para la pagina principal.
 def home(request):

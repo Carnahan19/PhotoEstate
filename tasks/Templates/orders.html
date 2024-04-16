@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'orders.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="projects-container">
+        <h1>Tus Pedidos</h1>
+        <div class="project-actions">
+            <button class="njobs" onclick="window.location.href='/njobs/'">Crear orden nueva</button>
+        </div>
+        <div class="projects-list">
+            {% for project in projects %}
+            <div class="project">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+                <button class="njobs" onclick="window.location.href='njobs/'">Ver detalles</button>button>
+            </div>
+            {% empty %}
+            <p>No tienes proyectos todavía.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

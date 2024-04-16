@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Trabajo</title>
+    <link rel="stylesheet" href="{% static 'njobs.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Nuevo Trabajo</h1>
+        <form action="/ruta-para-procesar-formulario" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="titulo">Título del Trabajo:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="archivos">Subir Archivos (jpeg, png, pdf):</label>
+                <input type="file" id="archivos" name="archivos" accept=".jpeg, .jpg, .png, .pdf" multiple required>
+            </div>
+            <button type="submit">Enviar Trabajo</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

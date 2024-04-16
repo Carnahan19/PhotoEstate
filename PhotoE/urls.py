@@ -31,5 +31,9 @@ urlpatterns = [
     path('enhancements/', views.enhancements, name='enhancements'),
     path('twilight/', views.twilight, name='twilight'),
     path('floorplans/', views.floorplans, name='floorplans'),
+    path('njobs/', views.njobs, name='njobs'),
+    path('orders/', views.orders, name='orders'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'tasks.views.handler404'

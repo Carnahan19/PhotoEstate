@@ -54,3 +54,17 @@ button {
 button:hover {
     background-color: #376E6F;
 }
+.login-prompt {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-prompt a {
+    color: #DA7B93;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-prompt a:hover {
+    color: #376E6F;
+}
